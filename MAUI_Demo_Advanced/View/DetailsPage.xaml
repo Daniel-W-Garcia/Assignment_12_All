@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUI_Demo_Advanced.View.DetailsPage"
+             xmlns:viewmodel="clr-namespace:MAUI_Demo_Advanced.ViewModel"
+             x:DataType="viewmodel:MonkeyDetailsViewModel"
+             Title="{Binding Monkey.Name}">
+    <ScrollView>
+        <VerticalStackLayout>
+            <Label Text="{Binding Monkey.Details}"/>
+            <Image Source="{Binding Monkey.Image}" WidthRequest="150" HeightRequest="150" Aspect="AspectFill" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand"/>
+            <Button Text="Open Map" Command="{Binding OpenMapCommand}" HorizontalOptions="Center" WidthRequest="200" VerticalOptions="Center" Margin="8"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
